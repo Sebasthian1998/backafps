@@ -38,6 +38,7 @@ class User extends Authenticatable
      */
 
     public function kits(){
-        return $this->belongsToMany(Kit::class, 'user_kit');
+        // return $this->belongsToMany(Kit::class, 'user_kit');
+        return $this->belongsToMany(Kit::class, 'user_kit')->withPivot('quantity');
     }
 }

@@ -1,6 +1,8 @@
 <?php
 
+use App\Jobs\JobVerificarCuentaAfiliado;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +16,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    JobVerificarCuentaAfiliado::dispatchAfterResponse();
+    return response("FIN");
 });

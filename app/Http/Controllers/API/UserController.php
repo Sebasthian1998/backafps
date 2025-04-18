@@ -75,7 +75,8 @@ class UserController extends Controller
 
     }
 
-    public function addQuantity(Request $request){
-        $user = User::find($request->id);  
+    public function addQuantity(Request $request,int  $idUser){
+        $user = User::find($idUser);  
+        return $user->kits;
     }
 }

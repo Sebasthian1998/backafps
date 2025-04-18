@@ -70,6 +70,11 @@ return [
             'block_for' => null,
             'after_commit' => false,
         ],
+        'prometeo_queue' => [
+            'driver' => 'sync', // Use the appropriate driver for your queue
+            // 'connection' => 'prometeo_queue', // Specify the connection name
+            'queue' => 'prometeo_queue', // Match the queue name from your job
+        ],
 
     ],
 
@@ -107,3 +112,5 @@ return [
     ],
 
 ];
+
+
